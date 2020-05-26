@@ -1,0 +1,104 @@
+#testing by changing username
+version: 0.2
+run-as: root
+env:
+  variables:
+    REPO_ORG: 'cxt-ebs'
+    REPO_NAME: 'ebs-sfdx-package-1'
+    DEFAULT_TARGET_BRANCH: 'CXTC-736'
+
+    SF_USER: 'sf-user'  # using 50002104858 in secret
+    SFDC_PLATFORM_E2E: '.b2b.neworge2e'
+    SFDC_PLATFORM_BETA: '.b2b.neworgbeta'
+    SFDC_PLATFORM_STG: '.b2b.neworgstg'
+    SFDC_PLATFORM_HUB: '.b2b'
+    SFDC_PLATFORM_DEV: '.b2b.dev'
+
+    AR_GIT: 'ar-git'
+    CICD_SLACK: 'cicd-slack'
+
+    SFDX_KEY: 'sfdx-key'
+    SFDX_CLIENT_ID_E2E: 'sfdx-clientid-e2e'
+    SFDX_CLIENT_ID_BETA: 'sfdx-clientid-beta'
+    SFDX_CLIENT_ID_STG: 'sfdx-clientid-stg'
+    SFDX_CLIENT_ID_HUB: 'sfdx-clientid-hub'
+    SFDX_CLIENT_ID_DEV: 'sfdx-clientid-dev'
+
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+      python: 3.7
+      nodejs: 12
+    # commands:
+        # - apt-get update -y
+        # - apt-get install ant -y
+        # - apt-get install jq -y
+        # - apt-get install tree -y
+        # - pip install --upgrade pip
+        # - pip install requests
+        # - pip install slackclient
+        # - pip install bs4
+        # - pip install linetimer
+
+  build:
+    commands:
+      # get secrets from AWS -- using agi pr-secret functionality ONLY IF THIS IS A PRS
+        - |
+          if [ "$GIT_BRANCH" = "master" ]; then
+              # connect to the HUB
+              echo "Connecting to the HUB in master branch"
+              sf_user=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SF_USER}" --output text --query SecretString)
+              sfdx_key=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SFDX_KEY}" --output text --query SecretString)
+              sfdx_client_id_e2e=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SFDX_CLIENT_ID_E2E}" --output text --query SecretString)
+              sfdx_client_id_beta=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SFDX_CLIENT_ID_BETA}" --output text --query SecretString)
+              sfdx_client_id_stg=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SFDX_CLIENT_ID_STG}" --output text --query SecretString)
+              sfdx_client_id_hub=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/release/${SFDX_CLIENT_ID_HUB}" --output text --query SecretString)
+          else 
+            if [ "$GIT_BRANCH" != "master" ] && [ -n $GIT_PR ]; then
+                # connect to the HUB
+                echo "Connecting to the HUB in ANY OTHER branch"
+                sf_user=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SF_USER}" --output text --query SecretString)
+                sfdx_key=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_KEY}" --output text --query SecretString)
+                sfdx_client_id_e2e=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_CLIENT_ID_E2E}" --output text --query SecretString)
+                sfdx_client_id_beta=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_CLIENT_ID_BETA}" --output text --query SecretString)
+                sfdx_client_id_stg=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_CLIENT_ID_STG}" --output text --query SecretString)
+                sfdx_client_id_hub=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_CLIENT_ID_HUB}" --output text --query SecretString)
+            fi   
+          fi
+          echo $sf_user
+          echo $sfdx_client_id_e2e
+          echo $sfdx_client_id_beta
+          echo $sfdx_client_id_stg
+          echo $sfdx_client_id_hub
+          # if [ ! -z $GIT_PR ]
+          # then 
+          #     # gitpass=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${AR_GIT}" --output text --query SecretString)
+          #     # slackpass=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${CICD_SLACK}" --output text --query SecretString)
+          #     # sfdx_client_id_dev=$(aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:${AWS_DEFAULT_REGION}:110889485328:secret:/agi-repo/${REPO_ORG}/${REPO_NAME}/pr/${SFDX_CLIENT_ID_DEV}" --output text --query SecretString)               
+          # fi
+
+        # orient to path and set some vars
+        - main_dir=$(pwd)
+        - echo $main_dir
+        # install and version sfdx cli
+        - npm install sfdx-cli --global
+        # - npm install sfdx-cli@7.52.0 --global
+        - sfdx --version
+        # make key  file from secret
+        - printf "%s" "$sfdx_key" > "$main_dir/sfdx-intuit-private-key.key"
+        
+        - |
+          if [ "$GIT_BRANCH" = "master" ]; then
+              ./merge.sh
+
+          elif [ "$GIT_BRANCH" != "master" ] && [ -n $GIT_PR ]; then
+                ./pr.sh
+                
+          elif ["$GIT_TAG" = "release"] && [ -n $GIT_PR ]; then
+               ./release.sh
+          fi       
+
+    finally:
+        - echo Validation completed on `date`

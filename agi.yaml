@@ -1,0 +1,28 @@
+version: 0.1
+bu: t4i-csst
+# asset_alias: intuit.platform.salesforceb2bsalestestautomation
+
+build:
+  # type: docker
+  properties:
+    # fetch_submodules: true
+    full_clone: true # only needed if history is factor
+ 
+    image: aws/codebuild/standard
+    image_tag: "4.0"
+    branches:
+      - master
+    timeout: 30m
+
+target_accounts:
+  -
+    id: preprod-us-west-2
+    account_id: 110889485328
+    region: us-west-2
+    vpc_id: vpc-8b1cf6ed
+
+
+notifications:
+  -
+    type: slack
+    endpoint: "#team-cicd-agi-test-results"
