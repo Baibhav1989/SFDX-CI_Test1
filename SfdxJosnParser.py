@@ -37,7 +37,7 @@ class SfdxJosnParser:
 
     # methiod to parse result data 
     def parseResultdata(self,resultdata):
-
+        i=1
         print(resultdata)
 
         if (isinstance(resultdata,list)):
@@ -51,8 +51,9 @@ class SfdxJosnParser:
                     self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k) +"</b></td></tr>"
                     self.parselistdata(v)
                 else:
-                    self.returnStr += "<tr><td>"+str(k)+"</td><td>"+str(v) +"</td></tr>"
-    
+                    self.returnStr += "<tr><td>"+str(i)+"</td><td>"+str(k)+" : "+str(v) +"</td></tr>"
+                    #self.returnStr += "<tr><td>"+str(i)+"</td><td><table><tr><td>"+str(k)+"</td><td>"+str(v)+"</td></tr></table></td></tr>"
+                i=i+1   
 
     # *** Method parseResultdata End
 
@@ -70,6 +71,7 @@ class SfdxJosnParser:
                     self.returnStr +="</table>"
                 else:
                     self.returnStr += str(k)+" : "+str(v)+"<br/>"
+                    #self.returnStr += "<table><tr><td>"+str(k)+"</td><td>"+str(v)+"</td></tr></table>"
             self.returnStr +="</td></tr>"
 
     # *** Method parselistdata End 
