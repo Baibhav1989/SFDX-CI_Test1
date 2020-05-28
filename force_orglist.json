@@ -1,0 +1,230 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "name": "ActiveScratchOrgs",
+      "max": 100,
+      "remaining": 91
+    },
+    {
+      "name": "AnalyticsExternalDataSizeMB",
+      "max": 40960,
+      "remaining": 40960
+    },
+    {
+      "name": "ConcurrentAsyncGetReportInstances",
+      "max": 200,
+      "remaining": 200
+    },
+    {
+      "name": "ConcurrentEinsteinDataInsightsStoryCreation",
+      "max": 5,
+      "remaining": 5
+    },
+    {
+      "name": "ConcurrentEinsteinDiscoveryStoryCreation",
+      "max": 2,
+      "remaining": 2
+    },
+    {
+      "name": "ConcurrentSyncReportRuns",
+      "max": 20,
+      "remaining": 20
+    },
+    {
+      "name": "DailyAnalyticsDataflowJobExecutions",
+      "max": 60,
+      "remaining": 60
+    },
+    {
+      "name": "DailyAnalyticsUploadedFilesSizeMB",
+      "max": 51200,
+      "remaining": 51200
+    },
+    {
+      "name": "DailyApiRequests",
+      "max": 109915000,
+      "remaining": 105054181
+    },
+    {
+      "name": "DailyAsyncApexExecutions",
+      "max": 2092600,
+      "remaining": 1498913
+    },
+    {
+      "name": "DailyBulkApiRequests",
+      "max": 10000,
+      "remaining": 8034
+    },
+    {
+      "name": "DailyBulkV2QueryFileStorageMB",
+      "max": 976562,
+      "remaining": 976562
+    },
+    {
+      "name": "DailyBulkV2QueryJobs",
+      "max": 10000,
+      "remaining": 10000
+    },
+    {
+      "name": "DailyDurableGenericStreamingApiEvents",
+      "max": 1000000,
+      "remaining": 994242
+    },
+    {
+      "name": "DailyDurableStreamingApiEvents",
+      "max": 1000000,
+      "remaining": 734091
+    },
+    {
+      "name": "DailyEinsteinDataInsightsStoryCreation",
+      "max": 1000,
+      "remaining": 1000
+    },
+    {
+      "name": "DailyEinsteinDiscoveryPredictAPICalls",
+      "max": 50000,
+      "remaining": 50000
+    },
+    {
+      "name": "DailyEinsteinDiscoveryPredictionsByCDC",
+      "max": 500000,
+      "remaining": 500000
+    },
+    {
+      "name": "DailyEinsteinDiscoveryStoryCreation",
+      "max": 100,
+      "remaining": 100
+    },
+    {
+      "name": "DailyGenericStreamingApiEvents",
+      "max": 100000,
+      "remaining": 100000
+    },
+    {
+      "name": "DailyScratchOrgs",
+      "max": 200,
+      "remaining": 179
+    },
+    {
+      "name": "DailyStandardVolumePlatformEvents",
+      "max": 50000,
+      "remaining": 49917
+    },
+    {
+      "name": "DailyStreamingApiEvents",
+      "max": 6000000,
+      "remaining": 5993543
+    },
+    {
+      "name": "DailyWorkflowEmails",
+      "max": 2000000,
+      "remaining": 1999582
+    },
+    {
+      "name": "DataStorageMB",
+      "max": 2645800,
+      "remaining": 785203
+    },
+    {
+      "name": "DurableStreamingApiConcurrentClients",
+      "max": 2000,
+      "remaining": 1697
+    },
+    {
+      "name": "FileStorageMB",
+      "max": 47186764,
+      "remaining": 46482545
+    },
+    {
+      "name": "HourlyAsyncReportRuns",
+      "max": 1200,
+      "remaining": 1200
+    },
+    {
+      "name": "HourlyDashboardRefreshes",
+      "max": 200,
+      "remaining": 200
+    },
+    {
+      "name": "HourlyDashboardResults",
+      "max": 5000,
+      "remaining": 5000
+    },
+    {
+      "name": "HourlyDashboardStatuses",
+      "max": 999999999,
+      "remaining": 999999999
+    },
+    {
+      "name": "HourlyLongTermIdMapping",
+      "max": 100000,
+      "remaining": 100000
+    },
+    {
+      "name": "HourlyODataCallout",
+      "max": 75000,
+      "remaining": 75000
+    },
+    {
+      "name": "HourlyPublishedPlatformEvents",
+      "max": 1375000,
+      "remaining": 1374797
+    },
+    {
+      "name": "HourlyPublishedStandardVolumePlatformEvents",
+      "max": 100000,
+      "remaining": 100000
+    },
+    {
+      "name": "HourlyShortTermIdMapping",
+      "max": 100000,
+      "remaining": 99921
+    },
+    {
+      "name": "HourlySyncReportRuns",
+      "max": 500,
+      "remaining": 500
+    },
+    {
+      "name": "HourlyTimeBasedWorkflow",
+      "max": 5000,
+      "remaining": 4994
+    },
+    {
+      "name": "MassEmail",
+      "max": 8000,
+      "remaining": 7954
+    },
+    {
+      "name": "MonthlyEinsteinDiscoveryStoryCreation",
+      "max": 500,
+      "remaining": 500
+    },
+    {
+      "name": "MonthlyPlatformEventsUsageEntitlement",
+      "max": 136500000,
+      "remaining": 135924710
+    },
+    {
+      "name": "Package2VersionCreates",
+      "max": 200,
+      "remaining": 182
+    },
+    {
+      "name": "PermissionSets",
+      "max": 1500,
+      "remaining": 1356
+    },
+    {
+      "name": "SingleEmail",
+      "max": 10000,
+      "remaining": 9562
+    },
+    {
+      "name": "StreamingApiConcurrentClients",
+      "max": 2000,
+      "remaining": 1994
+    }
+  ]
+}
