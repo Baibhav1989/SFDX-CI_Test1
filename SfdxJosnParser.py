@@ -35,19 +35,22 @@ class SfdxJosnParser:
 
     # methiod to parse result data 
     def parseResultdata(self,resultdata):
+
         print(resultdata)
+
         if (isinstance(resultdata,list)):
 
-            print("\n trtewrewr***Yes**")
             self.parselistdata(resultdata)
 
         else:
 
-            print("\n trtewrewr***No**")
             for (k1,v1) in resultdata.items():
                 if isinstance(v1,list):
                     self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k1) +"</b></td></tr>"
                     self.parselistdata(v1)
+                else:
+                    self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k)+" : "+str(v) +"</b></td></tr>"
+    
 
     # *** Method parseResultdata End
 
