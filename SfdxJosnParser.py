@@ -16,9 +16,12 @@ class SfdxJosnParser:
         strdata=json.loads(josn_data)
 
         for (k,v) in strdata.items():
-            if (k=="status") and (v==0):
-                if "result" in strdata.keys():
-                    self.parseResultdata(strdata["result"])
+            if (k=="status"):
+                if (v==0):
+                    if "result" in strdata.keys():
+                        self.parseResultdata(strdata["result"])
+                elif (v==1):
+                    self.parseErrordata(strdata)
 
         self.returnStr += "</table>"
 
@@ -33,7 +36,7 @@ class SfdxJosnParser:
     # methiod to parse result data 
     def parseResultdata(self,resultdata):
         print(resultdata)
-        if isinstance(resultdata,list):
+        if (isinstance(resultdata,list)):
 
             print("\n trtewrewr***Yes**")
             self.parselistdata(resultdata)
@@ -47,7 +50,7 @@ class SfdxJosnParser:
                     self.parselistdata(v1)
 
     # *** Method parseResultdata End
-    
+
 
     # methiod to parse list data 
     def parselistdata(self,listdata):
@@ -56,7 +59,7 @@ class SfdxJosnParser:
             self.returnStr += "<tr><td>"+ str(rowcount) +"</td><td>"
             rowcount=rowcount+1
             for (k,v) in l.items():                      
-                if  isinstance(v,list):
+                if (isinstance(v,list)):
                     self.returnStr +="<table>"
                     self.parselistdata(v)
                     self.returnStr +="</table>"
@@ -64,7 +67,21 @@ class SfdxJosnParser:
                     self.returnStr += str(k)+" : "+str(v)+"<br/>"
             self.returnStr +="</td></tr>"
 
-    # *** Method parselistdata End        
+    # *** Method parselistdata End 
 
+
+    # methiod to parse Error data 
+    def parseErrordata(self,errordata):
+        for (k,v) in errordata.items():
+            if (k != "status"):
+                if(k=="name"):       
+                    self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(v) +"</b></td></tr>"
+                else:
+                    if (not(isinstance(v,list))):
+                        self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k)+" : "+str(v) +"</b></td></tr>"
+                    else:
+                        self.parselistdata(v)    
+
+                       
                                                      
 
