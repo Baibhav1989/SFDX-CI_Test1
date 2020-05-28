@@ -18,9 +18,11 @@ class SfdxJosnParser:
         for (k,v) in strdata.items():
             if (k=="status"):
                 if (v==0):
+                    self.returnStr += "<tr><td><b>STATUS</b></td><td><b>SUCCESS</b></td></tr>"
                     if "result" in strdata.keys():
                         self.parseResultdata(strdata["result"])
                 elif (v==1):
+                    self.returnStr += "<tr><td><b>STATUS</b></td><td><b>FAILED</b></td></tr>"
                     self.parseErrordata(strdata)
 
         self.returnStr += "</table>"
@@ -44,12 +46,12 @@ class SfdxJosnParser:
 
         else:
 
-            for (k1,v1) in resultdata.items():
-                if isinstance(v1,list):
-                    self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k1) +"</b></td></tr>"
-                    self.parselistdata(v1)
+            for (k,v) in resultdata.items():
+                if isinstance(v,list):
+                    self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k) +"</b></td></tr>"
+                    self.parselistdata(v)
                 else:
-                    self.returnStr += "<tr><td><b>#</b></td><td><b>"+ str(k)+" : "+str(v) +"</b></td></tr>"
+                    self.returnStr += "<tr><td>"+str(k)+"</td><td>"+str(v) +"</td></tr>"
     
 
     # *** Method parseResultdata End
