@@ -21,11 +21,14 @@ class SfdxJosnParser:
                     self.parseResultdata(strdata["result"])
 
         self.returnStr += "</table>"
+
         print("\n ****************  \n")
         print(self.returnStr,"\n")
+
         return self.returnStr
                            
     # *** Method parseJosn End
+
 
     # methiod to parse result data 
     def parseResultdata(self,resultdata):
@@ -44,6 +47,7 @@ class SfdxJosnParser:
                     self.parselistdata(v1)
 
     # *** Method parseResultdata End
+    
 
     # methiod to parse list data 
     def parselistdata(self,listdata):
