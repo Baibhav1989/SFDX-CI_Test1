@@ -13,6 +13,6 @@ class sdfxcmd:
     f = open("force_orglist.json", "r")
     res_json_data=f.read()
     print(res_json_data)
-    sd=SfdxJosnParser();
+    sd=SfdxJosnParser()
     sd.parseJosn(res_json_data)
 

@@ -23,7 +23,7 @@ class SfdxJosnParser:
         self.returnStr += "</table>"
         print("\n ****************  \n")
         print(self.returnStr,"\n")
-        return self.returnStr;
+        return self.returnStr
                            
     # *** Method parseJosn End
 
