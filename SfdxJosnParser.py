@@ -3,7 +3,14 @@
 # purpose : to parse Josn and return josn as html table 
 
 import json
+
+class Wrapper(object):
+    def __init__(self, cmdSuccess ,tablestring):
+        self.success=cmdSuccess
+        self.resptbale=tablestring
+
 class SfdxJosnParser:
+  
 
     returnStr="<table>"
     #rowcount=1
@@ -14,23 +21,23 @@ class SfdxJosnParser:
 
         print("JSON : ",josn_data)
         strdata=json.loads(josn_data)
-
+        cmdsuccess=False
         for (k,v) in strdata.items():
             if (k=="status"):
                 if (v==0):
+                    cmdsuccess=True
                     self.returnStr += "<tr><td><b>STATUS</b></td><td><b>SUCCESS</b></td></tr>"
                     if "result" in strdata.keys():
                         self.parseResultdata(strdata["result"])
                 elif (v==1):
+                    cmdsuccess=False
                     self.returnStr += "<tr><td><b>STATUS</b></td><td><b>FAILED</b></td></tr>"
                     self.parseErrordata(strdata)
 
-        self.returnStr += "</table>"
-
-        print("\n ****************  \n")
-        print(self.returnStr,"\n")
-
-        return self.returnStr
+        self.returnStr += "</table>"       
+        #return wapper
+        return Wrapper(cmdsuccess,self.returnStr)
+         
                            
     # *** Method parseJosn End
 

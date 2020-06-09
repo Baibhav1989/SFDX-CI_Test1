@@ -14,5 +14,7 @@ class sdfxcmd:
     res_json_data=f.read()
     print(res_json_data)
     sd=SfdxJosnParser()
-    sd.parseJosn(res_json_data)
-
+    xv = sd.parseJosn(res_json_data)
+    print("\n")
+    print("Status : ",xv.success)
+    print("\n Table HTML : \n \n",xv.resptbale)

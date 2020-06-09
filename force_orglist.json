@@ -1,6 +1,9 @@
 {
-  "status": 0,
-  "result": {
-    "orgId": "00D210000003uN1EAI"
-  }
+  "status": 1,
+  "name": "Error",
+  "message": "Unexpected arguments: /sfdx-intuit-private-key.key, https://test.salesforce.com\nSee more help with --help",
+  "exitCode": 1,
+  "commandName": "AuthJwtGrantCommand",
+  "stack": "Error: Unexpected arguments: /sfdx-intuit-private-key.key, https://test.salesforce.com\nSee more help with --help\n    at validateArgs (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\@oclif\\parser\\lib\\validate.js:10:19)\n    at Object.validate (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\@oclif\\parser\\lib\\validate.js:57:5)\n    at Object.parse (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\@oclif\\parser\\lib\\index.js:26:7)\n    at AuthJwtGrantCommand.parse (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\@oclif\\command\\lib\\command.js:83:41)\n    at AuthJwtGrantCommand.init (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\salesforce-alm\\node_modules\\@salesforce\\command\\lib\\sfdxCommand.js:204:44)\nOuter stack:\n    at Function.wrap (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\salesforce-alm\\node_modules\\@salesforce\\core\\lib\\sfdxError.js:151:27)\n    at AuthJwtGrantCommand.catch (C:\\Users\\kpala1\\AppData\\Local\\sfdx\\node_modules\\salesforce-alm\\dist\\ToolbeltCommand.js:246:46)",
+  "warnings": []
 }

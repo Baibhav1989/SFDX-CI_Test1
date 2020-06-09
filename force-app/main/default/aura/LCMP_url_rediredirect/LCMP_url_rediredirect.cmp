@@ -1,0 +1,12 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader">
+	<aura:attribute name="accountRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    
+    <force:recordData aura:id="recordLoader"
+    recordId="{!v.recordId}"
+    fields="Name,Description,Phone,Industry"
+    targetFields="{!v.accountRecord}"
+    targetError="{!v.recordLoadError}"
+    recordUpdated="{!c.recordUpdated}"
+    />
+</aura:component>
