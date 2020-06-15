@@ -1,0 +1,287 @@
+[
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 128,
+            "modifiedTime": 1591434676623,
+            "changeTime": 1591434676623,
+            "contentHash": "51d86f3b64a3d9a0048d192f02147b0e9e9594e4",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 128,
+            "modifiedTime": 1591434682001,
+            "changeTime": 1591434682001,
+            "contentHash": "ae41ed56706e4439a34cda97ac997d7988935c2f",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 192,
+            "modifiedTime": 1591434681997,
+            "changeTime": 1591434681997,
+            "contentHash": "7519d87ba8087047829ba514f9315b16468633cb",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1591434683539,
+            "changeTime": 1591434683539,
+            "contentHash": "fbf357c36cad135c61d1535ad77b4d8d31763e1b",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 352,
+            "modifiedTime": 1591433709902,
+            "changeTime": 1591434683641,
+            "contentHash": "8bb782e850d5e59a0d4c12739ff4e9ea1f2eed1c",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.auradoc",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.auradoc",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 209,
+            "modifiedTime": 1591433709899,
+            "changeTime": 1591434683637,
+            "contentHash": "fd7f560d82324d6a8255c8c6ebf60698f5f93f1e",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.cmp",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.cmp",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 498,
+            "modifiedTime": 1591433840453,
+            "changeTime": 1591434683640,
+            "contentHash": "1220b4f553ccdcd334572c6ebf09023218386c9c",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.cmp-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.cmp-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 228,
+            "modifiedTime": 1591433709898,
+            "changeTime": 1591434683632,
+            "contentHash": "228bed42f73b74ee40f064d170cb86f4a1f64517",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.css",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.css",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 10,
+            "modifiedTime": 1591433709899,
+            "changeTime": 1591434683635,
+            "contentHash": "44063bf628f237edaa1f3f358714dd40ac321703",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.design",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.design",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 40,
+            "modifiedTime": 1591433709900,
+            "changeTime": 1591434683633,
+            "contentHash": "c5618bc7228e29c74b07b78fd040e05ae8a541ec",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.svg",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirect.svg",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 664,
+            "modifiedTime": 1591433709900,
+            "changeTime": 1591434683641,
+            "contentHash": "6a3a9c1d5556db4bde25af9ef0957c47feb17739",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectController.js",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectController.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 651,
+            "modifiedTime": 1591434443214,
+            "changeTime": 1591434683636,
+            "contentHash": "c468c9f8484e5a0f8ea233ed4abbdedfb3a39be6",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectHelper.js",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectHelper.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 45,
+            "modifiedTime": 1591433709901,
+            "changeTime": 1591434683630,
+            "contentHash": "fa35ebecd73c127729bf311a95b613f711a6f10b",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectRenderer.js",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/aura/LCMP_url_rediredirect/LCMP_url_rediredirectRenderer.js",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 50,
+            "modifiedTime": 1591433709902,
+            "changeTime": 1591434683638,
+            "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 128,
+            "modifiedTime": 1592190405176,
+            "changeTime": 1592190405176,
+            "contentHash": "9b494c8a0f0d0a83bc4e67cb6de00a45169cc0ed",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes/TestClass.cls",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes/TestClass.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 159,
+            "modifiedTime": 1590477815095,
+            "changeTime": 1590477815095,
+            "contentHash": "ab52e9fd27a746234246a8b510f9f7ee213d577c",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes/TestClass.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/classes/TestClass.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 174,
+            "modifiedTime": 1590477712382,
+            "changeTime": 1590477712382,
+            "contentHash": "b14927db8433719a949fb732f84be0e1c5bd19cd",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC/force-app/main/default/lwc",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC/force-app/main/default/lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 96,
+            "modifiedTime": 1590476955947,
+            "changeTime": 1590476955947,
+            "contentHash": "56f2d335ffa27c20b4ea310cf0214fa96f325894",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/localadmin/Documents/BinyLWC",
+        {
+            "state": "n",
+            "sourcePath": "/Users/localadmin/Documents/BinyLWC",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 704,
+            "modifiedTime": 1591854618735,
+            "changeTime": 1591854618735,
+            "contentHash": "d6cf21f07416adfb79b2f0cde377139dfb40c466",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
